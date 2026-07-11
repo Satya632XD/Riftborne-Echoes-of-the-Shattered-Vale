@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riftborne: Echoes of the Shattered Vale</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="ui">
+      <div id="titleCard" class="panel">
+        <h1>Riftborne</h1>
+        <p>Defend the Rift Beacon. Harvest essence by day. Survive the night.</p>
+        <button id="startBtn">Enter the Vale</button>
+        <div class="tip">
+          <strong>Controls:</strong> WASD move, Space jump, Shift sprint, Mouse look, Left click shoot, E harvest, B build mode, 1/2 select build piece.
+        </div>
+      </div>
+
+      <div id="hud" class="hidden">
+        <div class="topRow">
+          <div class="stat">HP <span id="hpText">100</span></div>
+          <div class="stat">ESSENCE <span id="essenceText">0</span></div>
+          <div class="stat">WAVE <span id="waveText">1</span></div>
+          <div class="stat">TIME <span id="timeText">00:00</span></div>
+          <div class="stat">BEACON <span id="beaconText">100</span></div>
+        </div>
+        <div class="barWrap">
+          <div class="barLabel">Health</div>
+          <div class="bar"><div id="hpBar"></div></div>
+        </div>
+        <div class="barWrap">
+          <div class="barLabel">Beacon</div>
+          <div class="bar"><div id="beaconBar"></div></div>
+        </div>
+        <div id="message"></div>
+        <div id="buildPanel" class="panel small hidden"></div>
+      </div>
+
+      <canvas id="minimap" width="220" height="220"></canvas>
+
+      <div id="gameOver" class="panel hidden">
+        <h2 id="gameOverTitle">The Rift Fought Back</h2>
+        <p id="gameOverText">Your beacon fell.</p>
+        <button id="restartBtn">Restart</button>
+      </div>
+
+      <div id="crosshair">+</div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
